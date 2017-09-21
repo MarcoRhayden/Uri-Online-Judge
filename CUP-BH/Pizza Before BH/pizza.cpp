@@ -72,11 +72,7 @@ int main() {
         if(LineManip.size() == 2) {
             stringstream(LineManip[0]) >> persons;
             stringstream(LineManip[1]) >> dates;
-
-            if( (persons >= 1 && persons <= 50)
-            && (dates >= 1 && dates <= 50) ) {
-                ReadDates(persons, dates);
-            }
+            ReadDates(persons, dates);
         }
     }
 

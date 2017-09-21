@@ -11,9 +11,10 @@ using namespace std;
 bool isPrime(int x) {
     int count = 0;
     for(int j = x; j > 0; j--) {
-        if(x % j == 0) {
+        if(x % j == 0)
             count++;
-        }
+        if(count > 2)
+          j = 0;
     }
     return((count == 2) ? true : false);
 }
@@ -54,17 +55,11 @@ int MagicFactor(int DoloresNMB, int min) {
 
 int main() {
     int DoloresNMB, prime;
-    string lines;
     cin >> DoloresNMB;
 
-    if(DoloresNMB >= 2 && DoloresNMB <= pow(10, 12)) {
-        while(getline(cin, lines)) {
-            stringstream(lines) >> prime;
-            if(prime >= 2 && prime <= pow(10,7)) {
-                DoloresNMB *= prime;
-                cout << MagicFactor(DoloresNMB, prime) << endl;
-            }
-        }
+    while(cin >> prime) {
+      DoloresNMB *= prime;
+      cout << MagicFactor(DoloresNMB, prime) << endl;
     }
 
     return(0);
