@@ -1,2 +1,3 @@
-# TEAM Illusion
-![alt text](http://d1mt9jmphk9kik.cloudfront.net/illusion/image1489031525.png)
+Uri-Online-Judge
+
+Set of resolutions for the website: https://www.urionlinejudge.com.br/
